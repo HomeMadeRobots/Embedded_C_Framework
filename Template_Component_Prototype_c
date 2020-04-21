@@ -1,0 +1,58 @@
+#include "<Component_Prototype>.h"
+
+/* Required Component_Prototypes */
+
+
+/* Event receiver Component_Prototypes */
+
+
+/*============================================================================*/
+/* Component_Prototype */
+/*============================================================================*/
+<Component_Type>_Var <Component_Prototype>_Var = {
+    /* <Var_Arg_1>:<Varg_Type_1> */
+    <Var_Arg_1_Value>,
+    /* <Var_Arg_2>:<Var_Arg_2> */
+    <Var_Arg_2_Value>
+};
+const <Component_Type> <Component_Prototype> = {
+    
+    /* Variable attributes (ref) */
+    &<Component_Prototype>_Var,
+    
+    /* Required interfaces */
+    
+    /* Sent events */
+    <Component_Prototype>__<Event_Port>,
+
+     /* Configuration_Parameter */
+    /* <Param_1>:<Param_Type_1> */
+    <Param_1_Value>
+};
+
+
+/*============================================================================*/
+/* Realized interfaces */
+/*============================================================================*/
+static void <Component_Prototype_Short>__<Port>__<Operation>( 
+    arg_in_type_1 arg_in_1,
+    arg_out_type_1* arg_out_1 )
+{
+    <Component_Type_short>__Port__Operation(
+        &<Component_Prototype>,
+        arg_in_1,
+        arg_out_1 );
+}
+const <Client_Server_Interface> <Component_Prototype>__<Port> =
+{
+    <Component_Prototype_Short>__<Port>__<Operation>
+};
+
+
+/*============================================================================*/
+/* Sent events */
+/*============================================================================*/
+void <Component_Prototype>__<Event_Port>( arg_type_1 arg_1 );
+{
+    <Receiver_Component_Prototype_Short>__<Event_Port>( arg_1 );
+}

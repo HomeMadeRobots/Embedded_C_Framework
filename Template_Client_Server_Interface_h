@@ -1,0 +1,29 @@
+#ifndef <INTERFACE>_H
+#define <INTERFACE>_H
+
+
+/* Arguments */
+
+
+/* For Asynchronous_Operation */
+#include "Asynchronous_Operation_Manager.h"
+
+
+/*============================================================================*/
+/* Client_Server_Interface */
+/*============================================================================*/
+typedef struct {
+    /* Synchronous_Operation */
+    void (*<sync_operation>) (
+        in_arg_type in_arg,
+        out_arg_type* out_arg );
+
+    /* Asynchronous_Operation */
+    void (*<async_operation>) ( 
+        Asynchronous_Operation_Manager* async_op_mgr, 
+        in_arg_type in_arg,
+        out_arg_type* out_arg );
+} <Interface>;
+
+
+#endif

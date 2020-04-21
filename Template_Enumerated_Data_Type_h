@@ -1,0 +1,15 @@
+#ifndef <ENUMERATED_DATA_TYPE>_H
+#define <ENUMERATED_DATA_TYPE>_H
+
+
+/*============================================================================*/
+/* Enumerated_Data_Type */
+/*============================================================================*/
+typedef enum {
+    <first_enumeral>,
+    <second_enumeral>,
+
+    <last_enumeral>
+} <Enumerated_Data_Type>;
+
+#endif
